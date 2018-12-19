@@ -15,7 +15,6 @@ import java.util.ResourceBundle;
 
 
 import amiard_brandt._BCMS_UI.BCMS_UI;
-//import com.FranckBarbier.Java._BCMS;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -42,7 +41,7 @@ public class PolicemanController implements Initializable {
     	System.out.println("test") ;
 		try 
 		{
-			ObservableList<String> list=FXCollections.observableArrayList ();
+			ObservableList<String> list= FXCollections.observableArrayList();
 			
 			for (String s : BCMS_UI.bCMS.get_police_vehicles()) 
 			{
