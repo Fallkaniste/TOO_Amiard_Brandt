@@ -12,10 +12,8 @@
    <children>
       <Pane prefHeight="658.0" prefWidth="583.0" style="-fx-background-color: white;">
          <children>
-            <Button layoutX="14.0" layoutY="386.0" mnemonicParsing="false" onAction="#acueilButtonController" text="Acceuil" />
-            <Button layoutX="315.0" layoutY="386.0" mnemonicParsing="false" onAction="#deconnexionButtonController" text="Déconnexion" />
-            <Button layoutX="181.0" layoutY="337.0" mnemonicParsing="false" onAction="#valideVehiculesButtonController" text="Valider" />
-            <Separator layoutX="108.0" layoutY="369.0" prefWidth="200.0" />
+            <Button layoutX="181.0" layoutY="354.0" mnemonicParsing="false" text="Valider" />
+            <Separator layoutX="108.0" layoutY="395.0" prefWidth="200.0" />
             <Separator layoutX="108.0" layoutY="85.0" prefWidth="200.0" />
             <HBox layoutX="7.0" layoutY="126.0" prefHeight="200.0" prefWidth="402.0">
                <children>
@@ -27,8 +25,8 @@
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="109.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#dispatchButtonController" text="-&gt;" textAlignment="CENTER" />
-                        <Button mnemonicParsing="false" onAction="#undispatchButtonController" text="&lt;-" />
+                        <Button mnemonicParsing="false" text="-&gt;" textAlignment="CENTER" />
+                        <Button mnemonicParsing="false" text="&lt;-" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="160.0">

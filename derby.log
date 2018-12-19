@@ -1,6 +1,6 @@
 ----------------------------------------------------------------
-Wed Dec 19 22:29:51 CET 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0167-c85f-f4b7-0000065dc558 
+Wed Dec 19 22:55:35 CET 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0167-c877-86e0-0000065dedc0 
 on database directory C:\Users\Bartosz\Documents\GitHub\TOO_Amiard_Brandt\BCMS_database with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
 Loaded from file:/C:/Users/Bartosz/Documents/GitHub/TOO_Amiard_Brandt/lib/derby.jar
 java.vendor=Oracle Corporation
