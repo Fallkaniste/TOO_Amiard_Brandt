@@ -28,29 +28,29 @@ public class PolicemanController implements Initializable {
     @FXML
     private Button undispatchButton;
     @FXML
-    private Button validateButton;
+    private Button bouton_valider;
     @FXML
     private TextField nbVehiculesTextField;
     @FXML
-    private ListView<String> availableVehiculesListView;
+    private ListView<String> list_dispo;
     @FXML
     private ListView<String> dispatchedVehiculesListView;
     
     @Override
 	public void initialize(URL location, ResourceBundle resources) 
 	{
+    	System.out.println("test") ;
 		try 
 		{
 			ObservableList<String> list=FXCollections.observableArrayList ();
 			
-			for (String s : com.FranckBarbier.Java._BCMS.get_police_vehicles()) 
+			for (String s : BCMS_UI.bCMS.get_police_vehicles()) 
 			{
 			    list.add(s);
 			}
-				PolicemanController.getContent().setStyle("-fx-background-color: blue;");
-			}
-			availableVehiculesListView.setItems(list);
-			availableVehiculesListView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+			System.out.println(list) ;
+			list_dispo.setItems(list);
+			list_dispo.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 		}
 		catch (SQLException e) 
 		{
