@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
@@ -38,7 +39,7 @@
                </children>
             </HBox>
             <Label layoutX="62.0" layoutY="29.0" text="Le nombre de véhicules requis pour cette mission est :" />
-            <Label fx:id="label_nbVehicules" layoutX="204.0" layoutY="59.0" text="?" />
+            <TextField alignment="CENTER" layoutX="192.0" layoutY="53.0" prefHeight="25.0" prefWidth="30.0" promptText="?" />
          </children></Pane>
    </children>
 </VBox>
