@@ -29,7 +29,6 @@ public class BCMS_UI extends Application
 			bCMS = new BCMS();
 			bCMS.start();
 			
-			int a = 3;
             /*bCMS.FSC_connection_request();
             bCMS.PSC_connection_request();
             bCMS.state_fire_truck_number(2);
