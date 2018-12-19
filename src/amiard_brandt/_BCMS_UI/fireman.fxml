@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="425.0" prefWidth="415.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amiard_brandt._BCMS_UI.Controllers.FiremanController">
+   <children>
+      <Pane prefHeight="428.0" prefWidth="518.0" style="-fx-background-color: white;" />
+   </children>
+</VBox>
