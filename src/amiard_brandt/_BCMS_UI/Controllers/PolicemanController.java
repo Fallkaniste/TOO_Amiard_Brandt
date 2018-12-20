@@ -54,7 +54,6 @@ public class PolicemanController implements Initializable {
 			}
 			System.out.println(list) ;
 			availableVehiculesListView.setItems(list);
-			availableVehiculesListView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 		}
 		catch (SQLException e) 
 		{
