@@ -34,11 +34,13 @@ public class DescriptionController implements Initializable {
 	@FXML
     private ChoiceBox<String> availableVehicles;
 
-	 @FXML
-	 private Button confirmButton;
+	@FXML
+	private Button confirmButton;
+	
+	//public static String nbVehiclesNeeded = availableVehicles.getValue().toString();
 
-	 @FXML
-	 public void confirmButton(ActionEvent event)
+	@FXML
+	public void confirmButton(ActionEvent event)
 	 {
 		 try {
 			 if (BCMS_UI.type)
@@ -46,19 +48,20 @@ public class DescriptionController implements Initializable {
 				 Parent root = FXMLLoader.load(getClass().getResource("../policeman.fxml"));
 				 Scene policeman  = new Scene(root);
 				 BCMS_UI.stage.setScene(policeman);
-				 // String test = availableVehicles.getValue().toString();
-				 // BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(test));
+				 String nbPVehicles = availableVehicles.getValue().toString();
+				 BCMS_UI.bCMS.state_police_vehicle_number(Integer.parseInt(nbPVehicles));
 			 }
 			 else
 			 {
 				 Parent root = FXMLLoader.load(getClass().getResource("../fireman.fxml"));
 				 Scene fireman  = new Scene(root);
 				 BCMS_UI.stage.setScene(fireman);
+				 String nbFVehicles = availableVehicles.getValue().toString();
+				 BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(nbFVehicles));
 			 }
-			 // String test = availableVehicles.getValue().toString();
-			 // BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(test));*/
+			 
 		 }
-		 catch (IOException e)
+		 catch (Statechart_exception | IOException e)
 		 {
 			 e.printStackTrace();
 		 }
