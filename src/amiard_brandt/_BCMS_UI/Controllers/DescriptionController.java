@@ -19,6 +19,7 @@ import java.util.ResourceBundle;
 import com.pauware.pauware_engine._Exception.Statechart_exception;
 
 import amiard_brandt._BCMS_UI.BCMS_UI;
+import amiard_brandt._BCMS_UI.HomepageController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -40,9 +41,11 @@ public class DescriptionController implements Initializable {
 	 public void confirmButton(ActionEvent event)
 	 {
 		 try {
-			/* if (BCMS_UI.type==true)
+			 if (HomepageController.a == 2)
 			 {
-				 
+				 System.out.println("test");
+				 BCMS_UI.stage.close();
+				
 				 Parent root = FXMLLoader.load(getClass().getResource("policeman.fxml"));
 				 Scene policeman  = new Scene(root);
 				 BCMS_UI.stage.setScene(policeman);
@@ -54,11 +57,11 @@ public class DescriptionController implements Initializable {
 				 Parent root = FXMLLoader.load(getClass().getResource("fireman.fxml"));
 				 Scene fireman  = new Scene(root);
 				 BCMS_UI.stage.setScene(fireman);
-			 }*/
+			 }
 			 String test = availableVehicles.getValue().toString();
 			 BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(test));
 		 }
-		 catch (Statechart_exception e)
+		 catch (Statechart_exception | IOException e)
 		 {
 			 e.printStackTrace();
 		 }
