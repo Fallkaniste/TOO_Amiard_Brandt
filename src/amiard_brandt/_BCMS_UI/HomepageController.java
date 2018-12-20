@@ -19,12 +19,13 @@ public class HomepageController
     private Button PButton;
     @FXML
     private Button FButton;
+    public static int a = 0;
     
     
     @FXML
     private void firemanButton(ActionEvent event) {  
         try {
-        		
+        		a = 1;
 				BCMS_UI.bCMS.FSC_connection_request();
 				Parent root = FXMLLoader.load(getClass().getResource("fireman.fxml"));
 				Scene fireman  = new Scene(root);
@@ -40,10 +41,11 @@ public class HomepageController
     @FXML
     private void policemanButton(ActionEvent event) {  
         try {
+        		a = 2;
 				BCMS_UI.bCMS.PSC_connection_request();
-				Parent root = FXMLLoader.load(getClass().getResource("policeman.fxml"));
-				Scene policeman  = new Scene(root);
-				BCMS_UI.stage.setScene(policeman);
+				Parent root = FXMLLoader.load(getClass().getResource("description.fxml"));
+				Scene description  = new Scene(root);
+				BCMS_UI.stage.setScene(description);
         }		
 		catch (Statechart_exception | IOException e) 
 			{
