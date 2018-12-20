@@ -27,25 +27,30 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
 public class DescriptionController implements Initializable {
-	
+
 	@FXML
     private ChoiceBox<String> alertTypes;
-	
+
 	@FXML
     private ChoiceBox<String> availableVehicles;
-	
+
 	 @FXML
 	 private Button confirmButton;
-	 
+
 	 @FXML
 	 public void confirmButton(ActionEvent event)
 	 {
 		 try {
-			 if (HomepageController.a == 2)
+
+			 Parent root = FXMLLoader.load(getClass().getResource("../fireman.fxml"));
+			 Scene policeman  = new Scene(root);
+			 BCMS_UI.stage.setScene(policeman);
+
+			 /*if (HomepageController.a == 2)
 			 {
 				 System.out.println("test");
 				 BCMS_UI.stage.close();
-				
+
 				 Parent root = FXMLLoader.load(getClass().getResource("policeman.fxml"));
 				 Scene policeman  = new Scene(root);
 				 BCMS_UI.stage.setScene(policeman);
@@ -59,36 +64,36 @@ public class DescriptionController implements Initializable {
 				 BCMS_UI.stage.setScene(fireman);
 			 }
 			 String test = availableVehicles.getValue().toString();
-			 BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(test));
+			 BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(test));*/
 		 }
-		 catch (Statechart_exception | IOException e)
+		 catch (IOException e)
 		 {
 			 e.printStackTrace();
 		 }
 	 }
-	 
+
 	 @FXML
 	 public void dispatchButton(ActionEvent event)
 	 {
-		 
+
 		 System.out.println("test") ;
 	 }
-	 
+
     @Override
-	public void initialize(URL location, ResourceBundle resources) 
+	public void initialize(URL location, ResourceBundle resources)
 	{
     	try  {
     		ObservableList<String> types = FXCollections.observableArrayList("arson", "robbery", "threat", "explosion", "hurricane","storm","terrosim","else");
         	alertTypes.setItems(types);
         	alertTypes.setValue("arson");
-        	
+
         	ObservableList<String> nbVehicles = FXCollections.observableArrayList();
         	for (int s= 1; s <=BCMS_UI.bCMS.get_police_vehicles().size() ; s++)
         	{
-        		
+
         		nbVehicles.add(String.valueOf(s));
         	}
-        	availableVehicles.setItems(nbVehicles);	
+        	availableVehicles.setItems(nbVehicles);
         	availableVehicles.setValue("1");
     	}
     	catch (SQLException e)
@@ -96,6 +101,6 @@ public class DescriptionController implements Initializable {
     		e.printStackTrace();
     	}
 	}
-    
-    
+
+
 }
