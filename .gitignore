@@ -2,3 +2,7 @@
 *.dat
 *.dat
 *.dat
+*.dat
+*.ctrl
+*.lck
+*.log
