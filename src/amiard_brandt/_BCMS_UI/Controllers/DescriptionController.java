@@ -41,32 +41,22 @@ public class DescriptionController implements Initializable {
 	 public void confirmButton(ActionEvent event)
 	 {
 		 try {
-
-			 Parent root = FXMLLoader.load(getClass().getResource("../fireman.fxml"));
-			 Scene policeman  = new Scene(root);
-			 BCMS_UI.stage.setScene(policeman);
-			 
-			 System.out.println(BCMS_UI.type) ;
-
-			 /*if (HomepageController.a == 2)
+			 if (BCMS_UI.type)
 			 {
-				 System.out.println("test");
-				 BCMS_UI.stage.close();
-
-				 Parent root = FXMLLoader.load(getClass().getResource("policeman.fxml"));
+				 Parent root = FXMLLoader.load(getClass().getResource("../policeman.fxml"));
 				 Scene policeman  = new Scene(root);
 				 BCMS_UI.stage.setScene(policeman);
-				 String test = availableVehicles.getValue().toString();
-				 BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(test));
+				 // String test = availableVehicles.getValue().toString();
+				 // BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(test));
 			 }
 			 else
 			 {
-				 Parent root = FXMLLoader.load(getClass().getResource("fireman.fxml"));
+				 Parent root = FXMLLoader.load(getClass().getResource("../fireman.fxml"));
 				 Scene fireman  = new Scene(root);
 				 BCMS_UI.stage.setScene(fireman);
 			 }
-			 String test = availableVehicles.getValue().toString();
-			 BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(test));*/
+			 // String test = availableVehicles.getValue().toString();
+			 // BCMS_UI.bCMS.state_fire_truck_number(Integer.parseInt(test));*/
 		 }
 		 catch (IOException e)
 		 {
