@@ -66,10 +66,11 @@ public class PolicemanController implements Initializable {
 
     public void validateButton(ActionEvent event)
 	{
-    	System.out.println("test");
-
 		try
 		{
+			int s = dispatchedVehiclesListView.getItems().size();
+			System.out.println(s) ;
+			System.out.println("test");
 			for(int i=0; i<dispatchedVehiclesListView.getItems().size(); i++)
 			{
 				BCMS_UI.bCMS.dispatch_police_vehicle(dispatchedVehiclesListView.getItems().get(i));
