@@ -1,6 +1,7 @@
 package amiard_brandt._BCMS_UI.Controllers;
 
 import javafx.fxml.Initializable;
+
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -8,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TitledPane;
+import javafx.scene.control.Label;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,13 +31,16 @@ public class FiremanController implements Initializable {
     private ListView<String> availableVehiclesListView;
     @FXML
     private ListView<String> dispatchedVehiclesListView;
+   // @FXML
+   // private Label nbVehiclesLabel;
+    
     
     @Override
 	public void initialize(URL location, ResourceBundle resources) 
 	{
-    	System.out.println("ajout") ;
 		try 
 		{
+			//nbVehiclesLabel.setText(DescriptionController.nbVehiclesNeeded);
 			ObservableList<String> list=FXCollections.observableArrayList ();
 			
 			for (String s : BCMS_UI.bCMS.get_fire_trucks()) 
@@ -67,8 +72,6 @@ public class FiremanController implements Initializable {
     
     public void validateButton(ActionEvent event)
 	{
-    	System.out.println("test");
-
 		try 
 		{
 			for(int i=0; i<dispatchedVehiclesListView.getItems().size(); i++)
