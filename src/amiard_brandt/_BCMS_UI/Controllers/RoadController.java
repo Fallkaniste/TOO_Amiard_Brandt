@@ -21,13 +21,14 @@ import com.pauware.pauware_engine._Exception.Statechart_exception;
 
 import amiard_brandt._BCMS_UI.BCMS_UI;
 import amiard_brandt._BCMS_UI.HomepageController;
+import amiard_brandt._BCMS_UI.timer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
-public class DescriptionController implements Initializable {
+public class RoadController implements Initializable {
 	
 	public static int nbNeeded;
 
@@ -39,11 +40,11 @@ public class DescriptionController implements Initializable {
 
 	 @FXML
 	 private Button confirmButton;
-
+	 
 	 @FXML
 	 public void confirmButton(ActionEvent event)
 	 {
-		 try {		
+		 /*try {		
 			 String nbneeded = availableVehicles.getValue().toString();
 			 nbNeeded = Integer.parseInt(nbneeded);
 			 if(BCMS_UI.type)
@@ -66,13 +67,15 @@ public class DescriptionController implements Initializable {
 		 catch (Statechart_exception | IOException e)
 		 {
 			 e.printStackTrace();
-		 }
+		 }*/
 	 }
 	 
     @Override
 	public void initialize(URL location, ResourceBundle resources)
 	{
-    	try  { 	
+    	timer start = new timer();
+    	start.runTimer();
+    	/*try  { 	
     		ObservableList<String> types = FXCollections.observableArrayList("arson", "robbery", "threat", "explosion", "hurricane","storm","terrosim","else");
         	alertTypes.setItems(types);
         	alertTypes.setValue("arson");
@@ -89,7 +92,7 @@ public class DescriptionController implements Initializable {
     	catch (SQLException e)
     	{
     		e.printStackTrace();
-    	}
+    	}*/
 	}
 
 
