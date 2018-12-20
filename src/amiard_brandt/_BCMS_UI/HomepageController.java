@@ -23,6 +23,7 @@ public class HomepageController
     @FXML
     private void firemanButton(ActionEvent event) {  
         try {
+        		BCMS_UI.type=false;
 				BCMS_UI.bCMS.FSC_connection_request();
 				Parent root = FXMLLoader.load(getClass().getResource("description.fxml"));
 				Scene fireman  = new Scene(root);

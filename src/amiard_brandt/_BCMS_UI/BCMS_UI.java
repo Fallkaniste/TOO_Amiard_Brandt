@@ -18,6 +18,7 @@ public class BCMS_UI extends Application
 	public static BCMS bCMS;
 	public static Stage stage;
 	public static Scene homeScene;
+	public static boolean type;
 	//public static Service currentService;
 	
 	@Override
@@ -29,6 +30,7 @@ public class BCMS_UI extends Application
 			bCMS = new BCMS();
 			bCMS.start();
 			
+			BCMS_UI.type = true; //true = policeman
             /*bCMS.FSC_connection_request();
             bCMS.PSC_connection_request();
             bCMS.state_fire_truck_number(2);

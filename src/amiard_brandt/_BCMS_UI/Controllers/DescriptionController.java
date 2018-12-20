@@ -45,6 +45,8 @@ public class DescriptionController implements Initializable {
 			 Parent root = FXMLLoader.load(getClass().getResource("../fireman.fxml"));
 			 Scene policeman  = new Scene(root);
 			 BCMS_UI.stage.setScene(policeman);
+			 
+			 System.out.println(BCMS_UI.type) ;
 
 			 /*if (HomepageController.a == 2)
 			 {
