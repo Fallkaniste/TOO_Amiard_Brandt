@@ -13,7 +13,7 @@
    <children>
       <Pane prefHeight="658.0" prefWidth="583.0" style="-fx-background-color: red;">
          <children>
-            <Button layoutX="181.0" layoutY="354.0" mnemonicParsing="false" text="Valider" />
+            <Button layoutX="181.0" layoutY="354.0" mnemonicParsing="false" onAction="#validateButton" text="Valider" />
             <Separator layoutX="108.0" layoutY="395.0" prefWidth="200.0" />
             <Separator layoutX="108.0" layoutY="85.0" prefWidth="200.0" />
             <HBox layoutX="7.0" layoutY="126.0" prefHeight="200.0" prefWidth="402.0">
@@ -21,19 +21,19 @@
                   <VBox prefHeight="200.0" prefWidth="160.0">
                      <children>
                         <Label alignment="CENTER" prefHeight="17.0" prefWidth="150.0" text="Véhicules disponibles :" textAlignment="CENTER" />
-                        <ListView fx:id="list_dispo" prefHeight="183.0" prefWidth="150.0" />
+                        <ListView fx:id="availableVehiclesListView" prefHeight="183.0" prefWidth="150.0" />
                      </children>
                   </VBox>
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="109.0">
                      <children>
-                        <Button mnemonicParsing="false" text="-&gt;" textAlignment="CENTER" />
-                        <Button mnemonicParsing="false" text="&lt;-" />
+                        <Button mnemonicParsing="false" onAction="#dispatchButton" text="-&gt;" textAlignment="CENTER" />
+                        <Button mnemonicParsing="false" onAction="#undispatchButton" text="&lt;-" />
                      </children>
                   </VBox>
                   <VBox prefHeight="200.0" prefWidth="160.0">
                      <children>
                         <Label alignment="CENTER" prefHeight="17.0" prefWidth="149.0" text="Véhicules choisis :" />
-                        <ListView fx:id="list_dispatched" prefHeight="183.0" prefWidth="150.0" />
+                        <ListView fx:id="dispatchedVehiclesListView" prefHeight="183.0" prefWidth="150.0" />
                      </children>
                   </VBox>
                </children>
