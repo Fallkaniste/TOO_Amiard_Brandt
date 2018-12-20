@@ -37,7 +37,6 @@ public class PolicemanController implements Initializable {
 		try
 		{
 			ObservableList<String> list=FXCollections.observableArrayList ();
-
 			for (String s : BCMS_UI.bCMS.get_police_vehicles())
 			{
 			    list.add(s);
