@@ -75,10 +75,15 @@ public class PolicemanController implements Initializable {
 		{
 			for(int i=0; i<dispatchedVehiclesListView.getItems().size(); i++)
 			{
-				BCMS_UI.bCMS.dispatch_police_vehicle(dispatchedVehiclesListView.getItems().get(i)); 
+				BCMS_UI.bCMS.dispatch_police_vehicle(dispatchedVehiclesListView.getItems().get(i));
 			}
+			
+			Parent root = FXMLLoader.load(getClass().getResource("_BCMS_UI.policeman_control.fxml"));
+			Scene policeman_control = new Scene(root);
+			BCMS_UI.stage.setScene(policeman_control);
+			
 		}
-    	catch (SQLException e) 
+    	catch (SQLException | IOException e) 
     	{
     		e.printStackTrace();
 		}
