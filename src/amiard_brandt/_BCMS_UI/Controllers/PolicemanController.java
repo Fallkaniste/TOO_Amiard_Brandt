@@ -33,7 +33,7 @@ public class PolicemanController implements Initializable {
     @Override
 	public void initialize(URL location, ResourceBundle resources)
 	{
-    	System.out.println("test") ;
+    	System.out.println("ajout") ;
 		try
 		{
 			ObservableList<String> list=FXCollections.observableArrayList ();
@@ -42,8 +42,7 @@ public class PolicemanController implements Initializable {
 			{
 			    list.add(s);
 			}
-			System.out.println(list) ;
-			availableVehiculesListView.setItems(list);
+			availableVehiclesListView.setItems(list);
 		}
 		catch (SQLException e)
 		{
@@ -56,7 +55,6 @@ public class PolicemanController implements Initializable {
 		ObservableList<String> selectedItems = availableVehiclesListView.getSelectionModel().getSelectedItems();
 		dispatchedVehiclesListView.getItems().addAll(selectedItems);
 		availableVehiclesListView.getItems().removeAll(selectedItems);
-
 	}
 
     public void undispatchButton(ActionEvent event)
@@ -77,10 +75,9 @@ public class PolicemanController implements Initializable {
 				BCMS_UI.bCMS.dispatch_police_vehicle(dispatchedVehiclesListView.getItems().get(i));
 			}
 
-			Parent root = FXMLLoader.load(getClass().getResource("_BCMS_UI.policeman_control.fxml"));
+			Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("../policeman_control.fxml"));
 			Scene policeman_control = new Scene(root);
 			BCMS_UI.stage.setScene(policeman_control);
-
 		}
     	catch (SQLException | IOException e)
     	{

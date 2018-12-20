@@ -33,16 +33,15 @@ public class FiremanController implements Initializable {
     @Override
 	public void initialize(URL location, ResourceBundle resources) 
 	{
-    	System.out.println("test") ;
+    	System.out.println("ajout") ;
 		try 
 		{
 			ObservableList<String> list=FXCollections.observableArrayList ();
 			
-			for (String s : BCMS_UI.bCMS.get_police_vehicles()) 
+			for (String s : BCMS_UI.bCMS.get_fire_trucks()) 
 			{
 			    list.add(s);
 			}
-			System.out.println(list) ;
 			availableVehiclesListView.setItems(list);
 			availableVehiclesListView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 		}
@@ -57,7 +56,6 @@ public class FiremanController implements Initializable {
 		ObservableList<String> selectedItems = availableVehiclesListView.getSelectionModel().getSelectedItems();
 		dispatchedVehiclesListView.getItems().addAll(selectedItems);
 		availableVehiclesListView.getItems().removeAll(selectedItems);
-
 	}
     
     public void undispatchButton(ActionEvent event)
