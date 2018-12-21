@@ -2,28 +2,52 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="425.0" prefWidth="415.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="amiard_brandt._BCMS_UI.HomepageController">
+<VBox alignment="CENTER" prefHeight="425.0" prefWidth="415.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amiard_brandt._BCMS_UI.HomepageController">
    <children>
       <Pane prefHeight="428.0" prefWidth="518.0" style="-fx-background-color: white;">
          <children>
-            <Button fx:id="PButton" layoutX="45.0" layoutY="266.0" mnemonicParsing="false" onAction="#policemanButton" prefHeight="82.0" prefWidth="123.0" text="Policeman" />
-            <Button fx:id="FButton" layoutX="240.0" layoutY="266.0" mnemonicParsing="false" onAction="#firemanButton" prefHeight="82.0" prefWidth="123.0" text="Fireman" />
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="64.0" prefHeight="72.0" prefWidth="242.0" text="BCMS" textAlignment="CENTER" textOverrun="CLIP">
+            <Button fx:id="FButton" layoutX="218.0" layoutY="386.0" mnemonicParsing="false" onAction="#firemanButton" prefHeight="25.0" prefWidth="182.0" text="Fireman">
+               <font>
+                  <Font name="Gentium Basic Bold" size="14.0" />
+               </font></Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="95.0" layoutY="29.0" prefHeight="72.0" prefWidth="242.0" text="BCMS" textAlignment="CENTER" textOverrun="CLIP">
                <font>
                   <Font name="DejaVuMathTeXGyre-Regular" size="53.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="117.0" layoutY="213.0" prefHeight="17.0" prefWidth="182.0" text="Log in as :" textAlignment="CENTER">
+            <Label alignment="CENTER" layoutX="117.0" layoutY="354.0" prefHeight="17.0" prefWidth="182.0" text="Log in as :" textAlignment="CENTER">
                <font>
-                  <Font name="DejaVu Serif Bold" size="17.0" />
+                  <Font name="Gentium Basic Bold" size="17.0" />
                </font>
             </Label>
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="89.0" layoutX="114.0" layoutY="55.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="89.0" layoutX="116.0" layoutY="20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+            <ImageView fitHeight="213.0" fitWidth="182.0" focusTraversable="true" layoutX="18.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/police.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="219.0" fitWidth="182.0" focusTraversable="true" layoutX="218.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/fireman.jpg" />
+               </image>
+            </ImageView>
+            <Button fx:id="PButton" layoutX="14.0" layoutY="386.0" mnemonicParsing="false" onAction="#policemanButton" prefHeight="25.0" prefWidth="182.0" text="Policeman">
+               <font>
+                  <Font name="Gentium Basic Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label layoutX="201.0" layoutY="390.0" text="or">
+               <font>
+                  <Font name="Gentium Basic Bold" size="14.0" />
+               </font>
+            </Label>
          </children></Pane>
    </children>
 </VBox>
