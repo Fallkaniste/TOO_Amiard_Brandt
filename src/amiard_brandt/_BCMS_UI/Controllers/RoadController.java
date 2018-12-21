@@ -14,14 +14,18 @@ import javafx.scene.control.ChoiceBox;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import com.FranckBarbier.Java._BCMS.BCMS;
 import com.pauware.pauware_engine._Exception.Statechart_exception;
+import javafx.scene.control.Label;
 
 import amiard_brandt._BCMS_UI.BCMS_UI;
 import amiard_brandt._BCMS_UI.HomepageController;
-import amiard_brandt._BCMS_UI.timer;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -40,6 +44,10 @@ public class RoadController implements Initializable {
 
 	 @FXML
 	 private Button confirmButton;
+	 
+	 
+	 @FXML
+	 private Label kmLabel;
 	 
 	 @FXML
 	 public void confirmButton(ActionEvent event)
@@ -69,12 +77,15 @@ public class RoadController implements Initializable {
 			 e.printStackTrace();
 		 }*/
 	 }
-	 
+
     @Override
 	public void initialize(URL location, ResourceBundle resources)
 	{
-    	timer start = new timer();
-    	start.runTimer();
+    	Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss");
+        System.out.println( sdf.format(cal.getTime()) );
+        
+    	//test.runTimer();
     	/*try  { 	
     		ObservableList<String> types = FXCollections.observableArrayList("arson", "robbery", "threat", "explosion", "hurricane","storm","terrosim","else");
         	alertTypes.setItems(types);
