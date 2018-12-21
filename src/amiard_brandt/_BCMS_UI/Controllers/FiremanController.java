@@ -80,6 +80,7 @@ public class FiremanController implements Initializable {
 				String show;
 				for(int i=0; i<dispatchedVehicles.getItems().size(); i++)
 				{
+					PolicemanController.selectedVehicles = dispatchedVehicles.getItems();
 					BCMS_UI.bCMS.dispatch_fire_truck(dispatchedVehicles.getItems().get(i)); 
 					show=dispatchedVehicles.getItems().get(i);
 					System.out.println("	DISPATCHED: "+show);
