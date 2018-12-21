@@ -1,11 +1,11 @@
 ----------------------------------------------------------------
-Fri Dec 21 01:24:25 CET 2018:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0167-ce26-2536-00000df4ce38 
-on database directory C:\Users\Landry\Documents\Eclipse\TOO_Amiard_Brandt\BCMS_database with class loader sun.misc.Launcher$AppClassLoader@73d16e93 
-Loaded from file:/C:/Users/Landry/Documents/Eclipse/TOO_Amiard_Brandt/lib/derby.jar
+Fri Dec 21 01:29:23 CET 2018:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446): instance a816c00e-0167-ce2a-af43-0000065deaa8
+on database directory C:\Users\Bartosz\Documents\GitHub\TOO_Amiard_Brandt\BCMS_database with class loader sun.misc.Launcher$AppClassLoader@73d16e93
+Loaded from file:/C:/Users/Bartosz/Documents/GitHub/TOO_Amiard_Brandt/lib/derby.jar
 java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_144-b01
-user.dir=C:\Users\Landry\Documents\Eclipse\TOO_Amiard_Brandt
+java.runtime.version=1.8.0_191-b12
+user.dir=C:\Users\Bartosz\Documents\GitHub\TOO_Amiard_Brandt
 os.name=Windows 10
 os.arch=amd64
 os.version=10.0
