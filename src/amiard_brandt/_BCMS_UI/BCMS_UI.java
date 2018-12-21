@@ -165,6 +165,7 @@ public class BCMS_UI extends Application
 			BCMS_UI.stage.setScene(homeScene);
 			BCMS_UI.stage.setTitle("Barbados Crisis Management System");
 			BCMS_UI.stage.show();
+			BCMS_UI.stage.setResizable(false);
 		}
 		catch (Statechart_exception | IOException e) 
 		{

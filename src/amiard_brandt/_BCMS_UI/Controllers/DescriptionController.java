@@ -30,6 +30,7 @@ import javafx.fxml.FXMLLoader;
 public class DescriptionController implements Initializable {
 	
 	public static int nbNeeded;
+	
 
 	@FXML
     private ChoiceBox<String> alertTypes;
@@ -83,6 +84,7 @@ public class DescriptionController implements Initializable {
 
         		nbVehicles.add(String.valueOf(s));
         	}
+        	System.out.println(nbVehicles);
         	availableVehicles.setItems(nbVehicles);
         	availableVehicles.setValue("1");
     	}

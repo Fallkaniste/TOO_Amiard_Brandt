@@ -29,6 +29,9 @@ import javafx.fxml.FXMLLoader;
 
 public class PolicemanController implements Initializable {
 
+	
+	public static ObservableList<String> selectedVehicles;
+	
     @FXML
     private ListView<String> availableVehicles;
     @FXML
@@ -78,9 +81,12 @@ public class PolicemanController implements Initializable {
 		{
 			if (dispatchedVehicles.getItems().size()==DescriptionController.nbNeeded)
 			{
+				
 				String show ;
 				for(int i=0; i<dispatchedVehicles.getItems().size(); i++)
-				{
+				{					
+
+					selectedVehicles = dispatchedVehicles.getItems();
 					BCMS_UI.bCMS.dispatch_police_vehicle(dispatchedVehicles.getItems().get(i));
 					show=dispatchedVehicles.getItems().get(i);
 					System.out.println("	DISPATCHED: "+show);
