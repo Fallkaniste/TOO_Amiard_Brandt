@@ -1,26 +1,16 @@
 package amiard_brandt._BCMS_UI.Controllers;
 
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TitledPane;
 import javafx.scene.control.ChoiceBox;
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
-import com.FranckBarbier.Java._BCMS.BCMS;
 import com.pauware.pauware_engine._Exception.Statechart_exception;
-
 import amiard_brandt._BCMS_UI.BCMS_UI;
-import amiard_brandt._BCMS_UI.HomepageController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -79,12 +69,21 @@ public class DescriptionController implements Initializable {
         	alertTypes.setValue("arson");
 
         	ObservableList<String> nbVehicles = FXCollections.observableArrayList();
-        	for (int s= 1; s <=BCMS_UI.bCMS.get_police_vehicles().size() ; s++)
+        	if(BCMS_UI.type)
         	{
-
-        		nbVehicles.add(String.valueOf(s));
+        		for (int s= 1; s <=BCMS_UI.bCMS.get_police_vehicles().size() ; s++)
+            	{
+            		nbVehicles.add(String.valueOf(s));
+            	}
         	}
-        	System.out.println(nbVehicles);
+        	else {
+        		for (int s= 1; s <=BCMS_UI.bCMS.get_fire_trucks().size() ; s++)
+            	{
+            		nbVehicles.add(String.valueOf(s));
+            	}
+        	}
+        	
+        	
         	availableVehicles.setItems(nbVehicles);
         	availableVehicles.setValue("1");
     	}

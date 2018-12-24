@@ -2,24 +2,16 @@ package amiard_brandt._BCMS_UI.Controllers;
 
 import javafx.fxml.Initializable;
 
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.control.SelectionMode;
-import javafx.scene.control.TitledPane;
 import javafx.scene.control.Label;
-
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
-import com.pauware.pauware_engine._Exception.Statechart_exception;
-
 import amiard_brandt._BCMS_UI.BCMS_UI;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

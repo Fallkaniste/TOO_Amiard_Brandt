@@ -10,8 +10,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-
 
 public class HomepageController
 {
@@ -28,7 +26,6 @@ public class HomepageController
 				Parent root = FXMLLoader.load(getClass().getResource("description.fxml"));
 				Scene fireman  = new Scene(root);
 				BCMS_UI.stage.setScene(fireman);
-				  //accueil.setVisible(false);
         }		
 		catch (Statechart_exception | IOException e ) 
 			{

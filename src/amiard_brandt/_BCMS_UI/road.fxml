@@ -8,18 +8,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="425.0" prefWidth="415.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="amiard_brandt._BCMS_UI.Controllers.RoadController">
+<VBox alignment="CENTER" prefHeight="425.0" prefWidth="415.0" style="-fx-background-color: lightgrey;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="amiard_brandt._BCMS_UI.Controllers.RoadController">
    <children>
       <Pane prefHeight="658.0" prefWidth="583.0" style="-fx-background-color: white;">
          <children>
             <Separator layoutX="99.0" layoutY="79.0" prefHeight="0.0" prefWidth="200.0" />
-            <ChoiceBox fx:id="dispatchedVehicles" layoutX="109.0" layoutY="225.0" prefHeight="25.0" prefWidth="118.0" />
-            <Label fx:id="textLabel4" alignment="CENTER" layoutX="7.0" layoutY="304.0" prefHeight="42.0" prefWidth="118.0" text="test" textOverrun="CLIP">
+            <ChoiceBox fx:id="dispatchedVehicles" layoutX="73.0" layoutY="282.0" prefHeight="25.0" prefWidth="118.0" />
+            <Label fx:id="textLabel4" alignment="CENTER" layoutX="78.0" layoutY="160.0" prefHeight="42.0" prefWidth="259.0" text="Change vehicles status :" textOverrun="CLIP">
                <font>
-                  <Font name="DejaVu Serif Bold" size="14.0" />
+                  <Font name="DejaVu Serif Bold" size="17.0" />
                </font>
             </Label>
-            <Button fx:id="confirmButton" layoutX="148.0" layoutY="360.0" mnemonicParsing="false" onAction="#confirmButton" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 5;" text="CONFIRM new status">
+            <Button fx:id="confirmButton" layoutX="108.0" layoutY="362.0" mnemonicParsing="false" onAction="#confirmButton" prefHeight="42.0" prefWidth="217.0" style="-fx-background-radius: 5;" text="CHANGE STATUS">
                <font>
                   <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
                </font>
@@ -64,17 +64,17 @@
                   <Font name="Gentium Basic" size="23.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" layoutX="6.0" layoutY="29.0" prefHeight="42.0" prefWidth="192.0" text="Do you agree with this road ?" textOverrun="CLIP">
+            <Label alignment="CENTER" layoutX="19.0" layoutY="31.0" prefHeight="42.0" prefWidth="192.0" text="Do you agree with this road  ?" textOverrun="CLIP">
                <font>
                   <Font name="Gentium Basic Bold" size="14.0" />
                </font>
             </Label>
-            <Button fx:id="yesButton" layoutX="222.0" layoutY="41.0" mnemonicParsing="false" onAction="#yesButton" prefHeight="17.0" prefWidth="56.0" style="-fx-background-radius: 5;" text="YES">
+            <Button fx:id="yesButton" layoutX="241.0" layoutY="41.0" mnemonicParsing="false" onAction="#yesButton" prefHeight="17.0" prefWidth="56.0" style="-fx-background-radius: 5;" text="YES">
                <font>
                   <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
                </font>
             </Button>
-            <Button fx:id="noButton" layoutX="304.0" layoutY="40.0" mnemonicParsing="false" onAction="#noButton" prefHeight="17.0" prefWidth="56.0" style="-fx-background-radius: 5;" text="NO">
+            <Button fx:id="noButton" layoutX="323.0" layoutY="40.0" mnemonicParsing="false" onAction="#noButton" prefHeight="17.0" prefWidth="56.0" style="-fx-background-radius: 5;" text="NO">
                <font>
                   <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
                </font>
@@ -89,8 +89,20 @@
                   <Font name="Gentium Basic Bold" size="14.0" />
                </font>
             </Label>
-            <Separator layoutX="290.0" layoutY="41.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
-            <ChoiceBox fx:id="statusVehicles" layoutX="273.0" layoutY="225.0" prefHeight="25.0" prefWidth="118.0" />
+            <Separator layoutX="309.0" layoutY="41.0" orientation="VERTICAL" prefHeight="25.0" prefWidth="0.0" />
+            <ChoiceBox fx:id="statusVehicles" layoutX="237.0" layoutY="282.0" prefHeight="25.0" prefWidth="118.0" />
+            <Separator fx:id="toremove" layoutX="60.0" layoutY="148.0" prefHeight="3.0" prefWidth="295.0" />
+            <Label fx:id="textLabel5" layoutX="85.0" layoutY="233.0" text="Vehicule name :">
+               <font>
+                  <Font name="Gentium Basic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="textLabel6" layoutX="252.0" layoutY="233.0" text="New status :">
+               <font>
+                  <Font name="Gentium Basic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Separator fx:id="toremove2" layoutX="212.0" layoutY="209.0" orientation="VERTICAL" prefHeight="141.0" prefWidth="6.0" />
          </children></Pane>
    </children>
 </VBox>
